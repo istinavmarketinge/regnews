@@ -2923,8 +2923,12 @@ template {
   bottom: 0;
 }
 
-.benefit__in {
+.benefit__bg {
   background: #fff;
+}
+
+.benefit__in {
+  background: #000;
   padding: 20px 20px 20px 50px;
   height: 100%;
   display: flex;
@@ -2932,6 +2936,15 @@ template {
   box-sizing: border-box;
   font-size: 30px;
   line-height: 39px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: table;
+}
+
+.benefit__in:hover {
+  background: linear-gradient(64deg, #04C3A1 17.9%, #0B5AA3 87.03%);
 }
 
 .modal {
