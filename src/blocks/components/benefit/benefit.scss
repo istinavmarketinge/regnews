@@ -1,0 +1,27 @@
+.benefit {
+    padding-left: 7px;
+    position: relative;
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 14px;
+        background: #fff;
+        left: 0;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+    &__in {
+        background: #fff;
+        padding: 20px 20px 20px 50px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}

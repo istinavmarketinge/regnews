@@ -386,6 +386,44 @@ template {
   font-weight: 900;
 }
 
+.container {
+  width: 100%;
+  max-width: 1302px;
+  margin: 0 auto;
+}
+
+.benefit {
+  padding-left: 7px;
+  position: relative;
+}
+
+.benefit:after,
+.benefit:before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 14px;
+  background: #fff;
+  left: 0;
+}
+
+.benefit:before {
+  top: 0;
+}
+
+.benefit:after {
+  bottom: 0;
+}
+
+.benefit__in {
+  background: #fff;
+  padding: 20px 20px 20px 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -419,4 +457,28 @@ template {
   max-width: 320px;
   padding: 1.0416666667vw;
   background: #fff;
+}
+
+.benefits {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+.benefits__in {
+  background: linear-gradient(64deg, #04C3A1 17.9%, #0B5AA3 87.03%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+}
+
+@media all and (max-width: 1024px) {
+  .benefits__in {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 640px) {
+  .benefits__in {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
