@@ -2903,6 +2903,7 @@ template {
 .benefit {
   padding-left: 7px;
   position: relative;
+  cursor: pointer;
 }
 
 .benefit:after,
@@ -2925,6 +2926,7 @@ template {
 
 .benefit__bg {
   background: #fff;
+  height: 100%;
 }
 
 .benefit__in {
@@ -2940,11 +2942,14 @@ template {
   font-weight: 500;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: table;
+  color: #000;
 }
 
 .benefit__in:hover {
-  background: linear-gradient(64deg, #04C3A1 17.9%, #0B5AA3 87.03%);
+  background: linear-gradient(64deg, #04C4A1 17.9%, #0B5AA3 87.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #04C4A1;
 }
 
 .header {
