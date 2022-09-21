@@ -2950,6 +2950,7 @@ template {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #04C4A1;
+  box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
 }
 
 .header {
