@@ -5,21 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220921170612">
+    <link rel="stylesheet" href="css/style.css?_v=20220921180438">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
     <div class="header__in">
         <a href="#" class="logo">
-     <div class="logo__name">Mazov & Co</div>
-     <div class="logo__description">Рекламное агенство полного цикла</div>
+     <!-- <div class="logo__name">Mazov & Co</div>
+     <div class="logo__description">Рекламное агенство полного цикла</div> -->
+     <div class="logo__image">
+        <img src="img/svg/logo.svg" alt="">
+     </div>
 </a>
+        <nav class="header_menu">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Наши клиенты</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Продать паблик VK/TG</a></li>
+        <li><a href="#">Заказать услуги</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</nav>
     </div>
 </header>
+        <div class="hero_banner" style="--backround: url('/img/hero_bg.jpg') 50% 50% / cover no-repeat">
+    <div class="hero_banner__in container">
+        <div class="hero_banner__left">
+            <h1 class="hero_banner__title">Новостные системы</h1>
+            <p class="hero_banner__subtitle">
+                Ваш <span class="hero_banner__subtitle--big hero_banner__subtitle--primary">PR</span> и <span class="hero_banner__subtitle--big hero_banner__subtitle--secondary">GR</span> консультант
+            </p>
+            <button class="button button--primary hero_banner__button">
+    Mazov & Co
+</button>
+        </div>
+    </div>
+</div>
         <div class="benefits">
-    <div class="benefits__in container">
-        <div class="benefit">
+    <div class="benefits__container container">
+        <div class="benefits__in">
+            <div class="benefit">
     <div class="benefit__bg">
     <div class="benefit__in">
         Более  10 лет на рынке
@@ -44,6 +73,7 @@
     </div>
 </div>
 </div>
+        </div>
     </div>
 </div>
         <footer class="footer"></footer>
@@ -61,6 +91,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220921170612"></script>
+    <script src="js/app.min.js?_v=20220921180438"></script>
 </body>
 </html>

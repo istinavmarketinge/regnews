@@ -1,5 +1,26 @@
 .logo {
     text-decoration: none;
-    &__name {}
-    &__description {}
+    &__name {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 41px;
+        color: $dark;
+    }
+    &__description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 7px;
+        line-height: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: #0B0B0B;
+    }
+    &__image {
+        max-width: 187px;
+        font-size: 0;
+        img {
+            max-width: 100%;
+        }
+    }
 }
