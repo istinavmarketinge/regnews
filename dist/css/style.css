@@ -2934,6 +2934,11 @@ template {
   line-height: 39px;
 }
 
+.header {
+  padding: 13px 86px;
+  background: #fff;
+}
+
 .modal {
   position: fixed;
   top: 0;
