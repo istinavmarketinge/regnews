@@ -422,6 +422,8 @@ template {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  font-size: 30px;
+  line-height: 39px;
 }
 
 .modal {
