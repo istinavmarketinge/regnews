@@ -1,0 +1,39 @@
+<section class="services" style="--background: url('https://via.placeholder.com/1920x768.png') 50% 50% / cover no-repeat">
+    <div class="services__in">
+        <div class="services__left">
+            <div class="services__block">
+                <div class="services__title">
+                    Услуги в области <span class="services__title--primary">IT</span>
+                </div>
+                @@include('../../components/list/list.html', {
+                    "customClass": ' services__list',
+                    "items": [
+                        '<li>Работаем по проектно, по retainer модели</li>',
+                        '<li>Веб и мобильная разработка</li>',
+                        '<li>Бэкенд и интеграции любой сложности</li>',
+                        '<li>Проектирование архитектуры и управление процессами</li>'
+                    ],
+                })
+            </div>
+            <div class="services__block">
+                <div class="services__title">
+                    Специализация
+                </div>
+                @@include('../../components/list/list.html', {
+                    "customClass": ' services__list',
+                    "items": [
+                        '<li>Работаем по проектно, по retainer модели</li>',
+                        '<li>Веб и мобильная разработка</li>',
+                        '<li>Бэкенд и интеграции любой сложности</li>',
+                        '<li>Проектирование архитектуры и управление процессами</li>'
+                    ],
+                })
+            </div>
+        </div>
+        <div class="services__right">
+            Мы разрабатываем проекты на PHP, Java, Objective-C, JavaScript (client-side).
+            Используем базы данных MySQL и PostgreSQL.
+            Работаем с фреймворками, Yii, Angular JS, Angular 2+, React, Vue.js, ReactNative.  Легко справляемся с большими нагрузками, сложными интеграциями и уязвимостями.
+        </div>
+    </div>
+</section>
