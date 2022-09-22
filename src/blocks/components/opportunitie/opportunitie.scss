@@ -2,14 +2,16 @@
     width: 60%;
     &__in {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
+        max-width: 1567px;
+        
     }
     &__image {
         width: 20%;
     }
     &__text {
-        width: 70%;
+        width: 80%;
     }
     &:nth-child(2n+2) &__in {
         flex-direction: row-reverse;

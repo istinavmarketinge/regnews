@@ -1,16 +1,26 @@
 .opportunities{
-    max-width: 1440px;
+    max-width: 1567px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 105px;
+    margin-bottom: 83px;
+    &__in{
+        padding: 104px 123px;
+        background-color: #fff;
+    }
     &__item {
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 1308px;
         align-items: flex-start;
+        margin: 0 auto;
     }
     &__title{
         font-size: 50px;
         font-weight: 400;
+        margin: 0;
+        padding-bottom: 36px;
     }
 
 }
