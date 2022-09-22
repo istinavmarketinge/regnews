@@ -1,0 +1,33 @@
+.media {
+    font-family: 'Roboto';
+    padding: 93px 0 75px;
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 130%;
+        color: $dark;
+        max-width: 632px;
+        margin-bottom: 55px;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 100%;
+        grid-gap: 23px;
+    }
+    &__item {
+        height: 118px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #D9D9D9;
+        padding: 10px;
+        font-size: 0;
+        box-sizing: border-box;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+} 
