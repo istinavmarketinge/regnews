@@ -3246,11 +3246,14 @@ body {
 }
 
 .opportunities {
+  padding-top: 105px;
+  padding-bottom: 83px;
+}
+
+.opportunities__wrap {
   max-width: 1567px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 105px;
-  margin-bottom: 83px;
 }
 
 .opportunities__in {
@@ -3326,7 +3329,6 @@ body {
 }
 
 .services {
-  padding: 0 339px 0 176px;
   background: var(--background);
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -3359,7 +3361,8 @@ body {
 }
 
 .services__left {
-  padding: 105px 61px 91px;
+  padding: 101px 61px 99px 129px;
+  margin-left: -129px;
   background: #fff;
 }
 

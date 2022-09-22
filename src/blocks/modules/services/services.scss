@@ -1,5 +1,5 @@
 .services {
-    padding: 0 339px 0 176px;
+    // padding: 0 339px 0 176px;
     background: var(--background);
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -27,7 +27,8 @@
         z-index: 2;
     }
     &__left {
-        padding: 105px 61px 91px;
+        padding: 101px 61px 99px 129px;
+        margin-left: -129px;
         background: #fff;
     }
     &__block {

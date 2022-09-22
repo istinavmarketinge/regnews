@@ -1,10 +1,12 @@
 .opportunities{
-    max-width: 1567px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 105px;
-    margin-bottom: 83px;
-    &__in{
+    padding-top: 105px;
+    padding-bottom: 83px;
+    &__wrap {
+        max-width: 1567px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__in {
         padding: 104px 123px;
         background-color: #fff;
     }
