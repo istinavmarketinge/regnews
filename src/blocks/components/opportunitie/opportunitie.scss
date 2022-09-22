@@ -1,4 +1,4 @@
-.opportunutie{
+.opportunutie {
     width: 60%;
     &__in {
         display: flex;
@@ -14,4 +14,13 @@
     &:nth-child(2n+2) &__in {
         flex-direction: row-reverse;
     }
+    &:nth-child(2n+2) {
+        align-self: flex-end;
+    }
+    &__number {
+        font-size: 100px;
+    }
 }
+// .opportunitie__number{
+//     font-size: 100px;
+// }
