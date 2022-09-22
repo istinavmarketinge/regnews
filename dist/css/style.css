@@ -3561,6 +3561,10 @@ body {
   margin-bottom: 55px;
 }
 
+.media__title--primary {
+  color: #04C4A1;
+}
+
 .media__items {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -3579,9 +3583,26 @@ body {
   box-sizing: border-box;
 }
 
+.media__item--preview {
+  background: #F5F5F5;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 130%;
+  color: #0B0B0B;
+}
+
 .media__item img {
   max-height: 100%;
   max-width: 100%;
+}
+
+.media__button {
+  margin-top: 52px;
 }
 
 @media all and (max-width: 1024px) {

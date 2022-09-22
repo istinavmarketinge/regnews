@@ -9,6 +9,9 @@
         color: $dark;
         max-width: 632px;
         margin-bottom: 55px;
+        &--primary {
+            color: $mainColor;
+        }
     }
     &__items {
         display: grid;
@@ -25,9 +28,24 @@
         padding: 10px;
         font-size: 0;
         box-sizing: border-box;
+        &--preview {
+            background: #F5F5F5;
+            grid-column-start: 4;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 130%;
+            color: $dark;
+        }
         img {
             max-height: 100%;
             max-width: 100%;
         }
+    }
+    &__button {
+        margin-top: 52px;
     }
 } 

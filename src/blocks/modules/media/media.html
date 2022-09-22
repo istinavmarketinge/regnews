@@ -4,11 +4,18 @@
             С нами работают ведущие региональные <span class="media__title--primary">СМИ</span>
         </div>
         <div class="media__items">
-            @@for (var i = 0; i < 16; i++) {
+            @@for (var i = 0; i < 13; i++) {
                 <div class="media__item">
                     <img src="https://via.placeholder.com/1920x768.png" alt="">
                 </div>
             }
+            <div class="media__item media__item--preview">
+                Место для вашей фирмы
+            </div>
         </div>
+        @@include('../../components/button/button.html', {
+            "class": ' media__button',
+            "text": 'Оставить заявку'
+        })
     </div>
 </div>
