@@ -1,0 +1,22 @@
+.input{
+    max-width: 275px;
+    width: 100%;
+    background: #02AD8F;
+    border-radius: 5px;
+    padding: 17px 0 17px 25px;
+    border: none;
+    outline:none;
+    &::placeholder{
+        color: #fff;
+    }
+    &__btn{
+        background: #fff;
+        border: none;
+        max-width: 245px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 17px ;
+        color: #04C3A1;
+    }
+    
+}

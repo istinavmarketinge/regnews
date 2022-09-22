@@ -1,0 +1,30 @@
+.form{
+    background: #04C4A1;
+    &__item h2{
+        color: #fff;
+        font-family: 'Roboto';
+        font-size: 42px;
+        font-weight: 500;
+        width: 30%;
+    }
+    &__item{
+        display: flex;
+        max-width: 1300px;
+        width: 100%;
+        align-items: baseline;
+
+    }
+    &__block{
+        display: inline-block;
+        width: 70%;
+    }
+    &__inputs{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__application{
+        display: flex;
+        color: #fff;
+        margin-top: 23px;
+    }
+}

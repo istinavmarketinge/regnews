@@ -3030,34 +3030,83 @@ template {
   cursor: pointer;
 }
 
-.opportunutie {
+.opportunity {
   width: 60%;
 }
 
-.opportunutie__in {
+.opportunity__in {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.opportunutie__image {
+.opportunity__image {
   width: 20%;
 }
 
-.opportunutie__text {
+.opportunity__text {
   width: 70%;
 }
 
-.opportunutie:nth-child(2n+2) .opportunutie__in {
+.opportunity:nth-child(2n+2) .opportunity__in {
   flex-direction: row-reverse;
 }
 
-.opportunutie:nth-child(2n+2) {
+.opportunity:nth-child(2n+2) {
   align-self: flex-end;
 }
 
-.opportunutie__number {
-  font-size: 100px;
+.opportunity__number {
+  font-size: 170px;
+  font-family: "Roboto";
+  -webkit-text-stroke: 5px transparent;
+  font-weight: bold;
+  position: relative;
+  bottom: 30px;
+  background: linear-gradient(64deg, #04C4A1 17.9%, #0B5AA3 87.03%);
+  -webkit-background-clip: text;
+  color: #fff;
+}
+
+.opportunity__text h2 {
+  font-size: 30px;
+  line-height: 39px;
+  font-family: "Roboto";
+}
+
+.opportunity__text p {
+  font-size: 18px;
+  line-height: 23px;
+  color: #909090;
+  font-family: "Roboto";
+}
+
+.input {
+  max-width: 275px;
+  width: 100%;
+  background: #02AD8F;
+  border-radius: 5px;
+  padding: 17px 0 17px 25px;
+  border: none;
+  outline: none;
+}
+
+.input::-moz-placeholder {
+  color: #fff;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.input__btn {
+  background: #fff;
+  border: none;
+  max-width: 245px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 17px;
+  color: #04C3A1;
 }
 
 .list {
@@ -3169,6 +3218,11 @@ template {
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+}
+
+.opportunities__title {
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .hero_banner {
@@ -3362,6 +3416,41 @@ template {
 
 .achievements__button {
   margin-top: 63px;
+}
+
+.form {
+  background: #04C4A1;
+}
+
+.form__item h2 {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 500;
+  width: 30%;
+}
+
+.form__item {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  align-items: baseline;
+}
+
+.form__block {
+  display: inline-block;
+  width: 70%;
+}
+
+.form__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__application {
+  display: flex;
+  color: #fff;
+  margin-top: 23px;
 }
 
 @media all and (max-width: 1024px) {
