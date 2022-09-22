@@ -3268,41 +3268,6 @@ template {
   color: #0B5AA3;
 }
 
-<<<<<<< HEAD
-.form {
-  background: #04C4A1;
-}
-
-.form__item h2 {
-  color: #fff;
-  font-family: "Roboto";
-  font-size: 42px;
-  font-weight: 500;
-  width: 30%;
-}
-
-.form__item {
-  display: flex;
-  max-width: 1300px;
-  width: 100%;
-  align-items: baseline;
-}
-
-.form__block {
-  display: inline-block;
-  width: 70%;
-}
-
-.form__inputs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form__application {
-  display: flex;
-  color: #fff;
-  margin-top: 23px;
-=======
 .services {
   padding: 0 339px 0 176px;
   background: var(--background);
@@ -3336,7 +3301,41 @@ template {
 
 .services__title--primary {
   color: #04C4A1;
->>>>>>> c271ea8b788af11200b7fd98b67d935dc67e7e2b
+}
+
+.form {
+  background: #04C4A1;
+}
+
+.form__item h2 {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 42px;
+  font-weight: 500;
+  width: 30%;
+}
+
+.form__item {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  align-items: baseline;
+}
+
+.form__block {
+  display: inline-block;
+  width: 70%;
+}
+
+.form__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__application {
+  display: flex;
+  color: #fff;
+  margin-top: 23px;
 }
 
 @media all and (max-width: 1024px) {
