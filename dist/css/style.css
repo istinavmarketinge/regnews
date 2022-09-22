@@ -3428,6 +3428,7 @@ template {
   font-size: 42px;
   font-weight: 500;
   width: 30%;
+  margin: 0;
 }
 
 .form__item {
@@ -3435,6 +3436,7 @@ template {
   max-width: 1300px;
   width: 100%;
   align-items: baseline;
+  padding: 72px 0 34px;
 }
 
 .form__block {
@@ -3442,7 +3444,7 @@ template {
   width: 70%;
 }
 
-.form__inputs {
+.form__inputs_top {
   display: flex;
   justify-content: space-between;
 }
@@ -3451,6 +3453,45 @@ template {
   display: flex;
   color: #fff;
   margin-top: 23px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.form__application a {
+  color: inherit;
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form__phantom_checkbox {
+  width: 15px;
+  height: 15px;
+  background: #FFFFFD;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.form__phantom_checkbox:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMiAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgNS4wODY5Nkw0LjcwMzcgOUwxMSAxIiBzdHJva2U9IiMwNEM0QTEiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K") 50% 50%/cover no-repeat;
+  transition: all 0.3s ease;
+}
+
+.form__checkbox:checked + .form__phantom_checkbox:after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
 }
 
 @media all and (max-width: 1024px) {

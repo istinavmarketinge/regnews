@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220922162202">
+    <link rel="stylesheet" href="css/style.css?_v=20220922163504">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -178,21 +178,24 @@
         <div class="form">
     <div class="form__in container">
         <div class="form__item">
-        <h2>Оставить заявку</h2>
-        <div class="form__block">
-            <form class="form__inputs">
-                <input class="input" type="text" placeholder="Имя"><input class="input" type="number" placeholder="Телефон"><input class="input__btn" type="submit" placeholder="Отправить">
-            </form>
-            <!-- <form class="form__application"> -->
-                <label class="form__application">
-                <input type="checkbox" name="checkbox" id="application">
-                <div class="castom_checkbox"></div>
-                <span>Нажимая кнопку “Отправить” вы соглашаетесь с Политикой конфиденциальности</span>
-            </label>
-            <!-- </form> -->
+            <h2>Оставить заявку</h2>
+            <div class="form__block">
+                <form class="form__inputs">
+                    <div class="form__inputs_top">
+                        <input class="input" type="text" placeholder="Имя"><input class="input" type="number" placeholder="Телефон"><input class="input__btn" type="submit" placeholder="Отправить">
+                    </div>
+                    <label class="form__application">
+                        <input type="checkbox" name="checkbox" class="form__checkbox">
+                        <div class="form__phantom_checkbox"></div>
+                        <span>Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#">Политикой
+                                конфиденциальности</a></span>
+                    </label>
+                </form>
+                <!-- <form class="form__application"> -->
+                <!-- </form> -->
+            </div>
         </div>
     </div>
-</div>
 </div>
         <div class="achievements" style="--background: url('https://via.placeholder.com/1920x768.png') 50% 50% / cover no-repeat">
     <div class="achievements__in container">
@@ -248,6 +251,6 @@
 </div>
         
     </div>
-    <script src="js/app.min.js?_v=20220922162202"></script>
+    <script src="js/app.min.js?_v=20220922163504"></script>
 </body>
 </html>
