@@ -19,14 +19,32 @@
                     @@include('../../components/list/list.html', {
                         "customClass": ' achievements__list',
                         "items": [
-                            '<li>Работаем по проектно, по retainer модели</li>',
-                            '<li>Веб и мобильная разработка</li>',
-                            '<li>Бэкенд и интеграции любой сложности</li>',
-                            '<li>Проектирование архитектуры и управление процессами</li>'
+                            '<li>инновационные web-технологии</li>',
+                            '<li>адаптивная верстка в системе администрирования</li>',
+                            '<li>асинхронная загрузка данных</li>',
+                            '<li>модульные агрегаторы</li>',
+                            '<li>система распределения нагрузки на базы данных </li>'
                         ],
                     })
                 </div>
-                <div class="achievements__texts_right"></div>
+                <div class="achievements__texts_right">
+                    <div class="achievements__texts_subtitle">
+                        Преимущества нашей CMS:
+                    </div>
+                    @@include('../../components/list/list.html', {
+                        "customClass": ' achievements__list',
+                        "items": [
+                            '<li>специализированная направленность</li>',
+                            '<li>адаптивность, русскоязычность</li>',
+                            '<li>асинхронная загрузка данных</li>',
+                            '<li>модульные агрегаторы</li>',
+                            '<li>стоимость (по сравнению с зарубежными  аналогами)</li>'
+                        ],
+                    })
+                    <div class="achievements__texts_text achievements__texts_subtitle--hasMargin">
+                        Все необходимые функции и модули для размещения новостей в сети интернет CMS содержит в себе.
+                    </div>
+                </div>
             </div>
             @@include('../../components/button/button.html', {
                 "class": ' achievements__button',

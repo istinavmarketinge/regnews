@@ -1,12 +1,17 @@
 @import 'gfonts';
 
 
+body {
+    background: #FAFAFA;
+}
+
 .container {
     width: 100%;
     max-width: 1402px;
     margin: 0 auto;
     padding-right: 50px;
     padding-left: 50px;
+    box-sizing: border-box;
 }
 
 .text--simple {

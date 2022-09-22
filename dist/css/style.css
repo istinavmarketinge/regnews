@@ -2894,12 +2894,17 @@ template {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+body {
+  background: #FAFAFA;
+}
+
 .container {
   width: 100%;
   max-width: 1402px;
   margin: 0 auto;
   padding-right: 50px;
   padding-left: 50px;
+  box-sizing: border-box;
 }
 
 .text--simple {
@@ -3226,6 +3231,7 @@ template {
 .benefits {
   padding-top: 58px;
   padding-bottom: 58px;
+  background: #fff;
 }
 
 .benefits__in {
@@ -3403,7 +3409,7 @@ template {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to right, #fff 0%, transparent 100%);
+  background: linear-gradient(to right, #fff 0%, #fff 40%, transparent 100%);
   z-index: 1;
 }
 
@@ -3416,6 +3422,7 @@ template {
   z-index: 2;
   border-radius: 0px 35px 35px 0px;
   padding: 79px 143px 80px 0;
+  margin-right: -166px;
 }
 
 .achievements__title {
@@ -3442,6 +3449,11 @@ template {
 
 .achievements__texts_subtitle--hasMargin {
   margin-top: 31px;
+}
+
+.achievements__texts_right {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .achievements__texts_text {
@@ -3531,6 +3543,44 @@ template {
   left: 2px;
   right: 2px;
   bottom: 2px;
+}
+
+.media {
+  font-family: "Roboto";
+  padding: 93px 0 75px;
+}
+
+.media__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 130%;
+  color: #0B0B0B;
+  max-width: 632px;
+  margin-bottom: 55px;
+}
+
+.media__items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 100%;
+  grid-gap: 23px;
+}
+
+.media__item {
+  height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D9D9D9;
+  padding: 10px;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.media__item img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 @media all and (max-width: 1024px) {
