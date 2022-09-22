@@ -11,6 +11,9 @@
     &__left, &__right{
         width: 40%;
     }
+    &__right{
+        text-align: right;
+    }
     a{
         color: inherit;
         text-decoration: none;
