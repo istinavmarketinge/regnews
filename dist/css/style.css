@@ -3045,6 +3045,14 @@ template {
   flex-direction: row-reverse;
 }
 
+.opportunutie:nth-child(2n+2) {
+  align-self: flex-end;
+}
+
+.opportunutie__number {
+  font-size: 100px;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -3142,14 +3150,17 @@ template {
   grid-gap: 0;
 }
 
-.opportunities__in {
+.opportunities {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.opportunities__item {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.opportunities__in:nth-child(2n) {
-  align-items: end;
+  align-items: flex-start;
 }
 
 .hero_banner {
