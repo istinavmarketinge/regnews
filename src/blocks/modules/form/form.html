@@ -1,0 +1,35 @@
+<div class="form">
+    <div class="form__in container">
+        <div class="form__item">
+        <h2>Оставить заявку</h2>
+        <div class="form__block">
+            <form class="form__inputs">
+                @@loop('../../components/input/input.html', [
+                    {
+                        "class": "input",
+                        "placeholder": "Имя",
+                        "type": "text"
+                    },
+                    {
+                        "class": "input",
+                        "placeholder": "Телефон",
+                        "type": "number"
+                    },
+                    {
+                        "class": "input__btn",
+                        "placeholder": "Отправить",
+                        "type": "submit"
+                    },
+                ])
+            </form>
+            <!-- <form class="form__application"> -->
+                <label class="form__application">
+                <input type="checkbox" name="checkbox" id="application">
+                <div class="castom_checkbox"></div>
+                <span>Нажимая кнопку “Отправить” вы соглашаетесь с Политикой конфиденциальности</span>
+            </label>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+</div>
