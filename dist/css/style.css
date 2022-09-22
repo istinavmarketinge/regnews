@@ -2902,6 +2902,13 @@ template {
   padding-left: 50px;
 }
 
+.text--simple {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+
 .benefit {
   padding-left: 7px;
   position: relative;
@@ -3095,6 +3102,7 @@ template {
   right: 0;
   top: 0;
   box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
+  z-index: 5;
 }
 
 .header__in {
@@ -3218,6 +3226,20 @@ template {
   padding: 0 339px 0 176px;
   background: var(--background);
   font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.services:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(64deg, #04C3A1 17.9%, #0B5AA3 87.03%);
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .services__in {
@@ -3225,6 +3247,12 @@ template {
   grid-template-columns: 833fr 544fr;
   grid-gap: 27px;
   align-items: center;
+}
+
+.services__left,
+.services__right {
+  position: relative;
+  z-index: 2;
 }
 
 .services__left {
@@ -3247,6 +3275,93 @@ template {
 
 .services__title--primary {
   color: #04C4A1;
+}
+
+.services__right {
+  background: #fff;
+  padding: 105px 91px;
+}
+
+.services__right_text {
+  color: #0B0B0B;
+  margin-bottom: 46px;
+}
+
+.services__right_text p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.services__right_text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.achievements {
+  background: var(--background);
+  padding: 79px 0 80px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.achievements:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+  z-index: 1;
+}
+
+.achievements__content {
+  background-image: var(--background-image);
+  background-color: #fff;
+  background-position: top 140% left 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+  border-radius: 0px 35px 35px 0px;
+  padding: 79px 143px 80px 0;
+}
+
+.achievements__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 100%;
+  color: #0B0B0B;
+  margin-bottom: 51px;
+}
+
+.achievements__texts_subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 140%;
+  color: #0B0B0B;
+  margin-bottom: 20px;
+}
+
+.achievements__texts_subtitle--ptimary {
+  color: #04C4A1;
+}
+
+.achievements__texts_subtitle--hasMargin {
+  margin-top: 31px;
+}
+
+.achievements__texts_text {
+  padding-bottom: 20px;
+}
+
+.achievements__texts {
+  display: grid;
+  grid-template-columns: 518fr 127fr 470fr;
+}
+
+.achievements__button {
+  margin-top: 63px;
 }
 
 @media all and (max-width: 1024px) {

@@ -2,11 +2,29 @@
     padding: 0 339px 0 176px;
     background: var(--background);
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(64deg, #04C3A1 17.9%, #0B5AA3 87.03%);
+        mix-blend-mode: overlay;
+        opacity: 0.5;
+        z-index: 1;
+    }
     &__in {
         display: grid;
         grid-template-columns: 833fr 544fr;
         grid-gap: 27px;
         align-items: center;
+    }
+    &__left,
+    &__right {
+        position: relative;
+        z-index: 2;
     }
     &__left {
         padding: 105px 61px 91px;
@@ -26,6 +44,21 @@
         margin-bottom: 37px;
         &--primary {
             color: $mainColor;
+        }
+    }
+    &__right {
+        background: #fff;
+        padding: 105px 91px;
+    }
+    &__right_text {
+        color: $dark;
+        margin-bottom: 46px;
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
     }
 }

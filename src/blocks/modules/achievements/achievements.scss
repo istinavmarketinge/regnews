@@ -1,1 +1,58 @@
-.achievements {}
+.achievements {
+    background: var(--background);
+    padding: 79px 0 80px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #fff 0%, transparent 100%);
+        z-index: 1;
+    }
+    &__content {
+        background-image: var(--background-image);
+        background-color: #fff;
+        background-position: top 140% left 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+        border-radius: 0px 35px 35px 0px;
+        padding: 79px 143px 80px 0;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 100%;
+        color: $dark;
+        margin-bottom: 51px;
+    }
+    &__texts_subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 140%;
+        color: $dark;
+        margin-bottom: 20px;
+        &--ptimary {
+            color: $mainColor;
+        }
+        &--hasMargin {
+            margin-top: 31px;
+        }
+    }
+    &__texts_text {
+        padding-bottom: 20px;
+    }
+    &__texts {
+        display: grid;
+        grid-template-columns: 518fr 127fr 470fr;
+    }
+    &__button {
+        margin-top: 63px;
+    }
+}
