@@ -6,6 +6,8 @@
     padding: 17px 0 17px 25px;
     border: none;
     outline:none;
+    font-size: 18px;
+    font-family: 'Roboto';
     &::placeholder{
         color: #fff;
     }
@@ -17,6 +19,8 @@
         border-radius: 5px;
         padding: 17px ;
         color: #04C3A1;
+        cursor: pointer;
+        font-family: 'Noto Sans';
     }
     
 }
