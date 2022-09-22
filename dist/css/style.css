@@ -2955,28 +2955,6 @@ template {
   box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
 }
 
-.opportunutie {
-  width: 60%;
-}
-
-.opportunutie__in {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.opportunutie__image {
-  width: 20%;
-}
-
-.opportunutie__text {
-  width: 70%;
-}
-
-.opportunutie:nth-child(2n+2) .opportunutie__in {
-  flex-direction: row-reverse;
-}
-
 .logo {
   text-decoration: none;
 }
@@ -3045,6 +3023,28 @@ template {
   cursor: pointer;
 }
 
+.opportunutie {
+  width: 60%;
+}
+
+.opportunutie__in {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.opportunutie__image {
+  width: 20%;
+}
+
+.opportunutie__text {
+  width: 70%;
+}
+
+.opportunutie:nth-child(2n+2) .opportunutie__in {
+  flex-direction: row-reverse;
+}
+
 .header {
   font-family: "Roboto", sans-serif;
   padding: 13px 86px;
@@ -3109,7 +3109,16 @@ template {
   grid-gap: 0;
 }
 
-<<<<<<< HEAD
+.opportunities__in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.opportunities__in:nth-child(2n) {
+  align-items: end;
+}
+
 .hero_banner {
   background: var(--backround);
   font-family: "Roboto", sans-serif;
@@ -3159,16 +3168,6 @@ template {
 
 .hero_banner__subtitle--secondary {
   color: #0B5AA3;
-=======
-.opportunities__in {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.opportunities__in:nth-child(2n) {
-  align-items: end;
->>>>>>> 97d67d6a8cf8f42a24c3057f0df6d9227e69fad7
 }
 
 @media all and (max-width: 1024px) {
