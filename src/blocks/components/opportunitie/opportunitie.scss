@@ -1,0 +1,17 @@
+.opportunutie{
+    width: 60%;
+    &__in {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    &__image {
+        width: 20%;
+    }
+    &__text {
+        width: 70%;
+    }
+    &:nth-child(2n+2) &__in {
+        flex-direction: row-reverse;
+    }
+}

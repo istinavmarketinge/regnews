@@ -2953,6 +2953,28 @@ template {
   box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
 }
 
+.opportunutie {
+  width: 60%;
+}
+
+.opportunutie__in {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.opportunutie__image {
+  width: 20%;
+}
+
+.opportunutie__text {
+  width: 70%;
+}
+
+.opportunutie:nth-child(2n+2) .opportunutie__in {
+  flex-direction: row-reverse;
+}
+
 .header {
   padding: 13px 86px;
   background: #fff;
@@ -3003,6 +3025,16 @@ template {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0;
+}
+
+.opportunities__in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.opportunities__in:nth-child(2n) {
+  align-items: end;
 }
 
 @media all and (max-width: 1024px) {
