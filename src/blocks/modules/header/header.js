@@ -1,12 +1,14 @@
+
 const Header = class Header {
-    constructor({someVareible}){
-        this.someVareible = someVareible;
+    constructor(enableFlexMenu = false){
+        this.enableFlexMenu = enableFlexMenu;
     }
-    someMethod() {
-        console.log(this.someVareible);
+    initFlexMenu() {
+        if (!this.enableFlexMenu) return;
+        console.log('Тут должно быть адаптивное меню');
     }
     init() {
-        this.someMethod();
+        this.initFlexMenu();
     }
 }
 

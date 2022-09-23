@@ -22,7 +22,9 @@
         z-index: 2;
         border-radius: 0px 35px 35px 0px;
         padding: 79px 143px 80px 0;
-        margin-right: -166px;
+        @media all and (min-width: 1700px) {
+            margin-right: -166px;
+        }
     }
     &__title {
         font-style: normal;
