@@ -9,9 +9,17 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media all and (max-width: 1280px) {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            min-height: auto;
+        }
     }
     &__left {
         padding-right: 704px;
+        @media all and (max-width: 1280px) {
+            padding-right: 0;
+        }
     }
     &__title {
         font-style: normal;
@@ -22,6 +30,12 @@
         text-transform: uppercase;
         color: #0B0B0B;
         margin-bottom: 52px;
+        @media all and (max-width: 1280px) {
+            font-size: 60px;
+        }
+        @media all and (max-width: 860px) {
+            font-size: 40px;
+        }
     }
     &__subtitle {
         margin: 0 0 52px 0;
@@ -30,6 +44,12 @@
         font-size: 38px;
         line-height: 98%;
         color: #0B0B0B;
+        @media all and (max-width: 1280px) {
+            font-size: 25px;
+        }
+        @media all and (max-width: 860px) {
+            font-size: 20px;
+        }
         &--big {
             font-weight: 700;
         }

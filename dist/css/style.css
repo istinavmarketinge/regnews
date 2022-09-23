@@ -3112,7 +3112,6 @@ body {
 }
 
 .input {
-  max-width: 250px;
   width: 100%;
   background: #02AD8F;
   border-radius: 5px;
@@ -3121,9 +3120,11 @@ body {
   outline: none;
   font-size: 18px;
   font-family: "Roboto";
+  flex: 1 1 auto;
+  box-sizing: border-box;
 }
 
-.input:first-child {
+.input:not(:last-of-type) {
   margin-right: 25px;
 }
 
@@ -3138,7 +3139,6 @@ body {
 .input__btn {
   background: #fff;
   border: none;
-  max-width: 245px;
   width: 100%;
   padding: 17px;
   color: #04C3A1;
@@ -3276,6 +3276,7 @@ body {
 .opportunities {
   padding-top: 105px;
   padding-bottom: 83px;
+  font-family: "Roboto", sans-serif;
 }
 
 .opportunities__wrap {
@@ -3449,7 +3450,6 @@ body {
 }
 
 .achievements__content {
-  background-image: var(--background-image);
   background-color: #fff;
   background-position: top 140% left 100%;
   background-repeat: no-repeat;
@@ -3483,11 +3483,6 @@ body {
 
 .achievements__texts_subtitle--hasMargin {
   margin-top: 31px;
-}
-
-.achievements__texts_right {
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .achievements__texts_text {
@@ -3621,10 +3616,6 @@ body {
 
 .media__item--preview {
   background: #F5F5F5;
-  grid-column-start: 4;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -3733,6 +3724,12 @@ body {
   font-size: 30px;
 }
 
+@media all and (min-width: 891px) {
+  .input__btn {
+    max-width: 245px;
+  }
+}
+
 @media all and (min-width: 1025px) {
   .mobileMenu__left {
     padding-right: 20px;
@@ -3742,6 +3739,24 @@ body {
     align-self: stretch;
     display: flex;
     align-items: center;
+  }
+}
+
+@media all and (min-width: 1261px) {
+  .achievements__content {
+    background-image: var(--background-image);
+  }
+
+  .achievements__texts_right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .media__item--preview {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
 
@@ -3766,6 +3781,74 @@ body {
 }
 
 @media all and (max-width: 1280px) {
+  .benefit__in {
+    font-size: 23px;
+  }
+
+  .button {
+    font-size: 25px;
+  }
+
+  .list li {
+    font-size: 18px;
+  }
+
+  .opportunities {
+    padding: 0;
+  }
+
+  .opportunities__in {
+    padding: 50px;
+  }
+
+  .hero_banner__in {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: auto;
+  }
+
+  .hero_banner__left {
+    padding-right: 0;
+  }
+
+  .hero_banner__title {
+    font-size: 60px;
+  }
+
+  .hero_banner__subtitle {
+    font-size: 25px;
+  }
+
+  .services {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .services__in {
+    grid-template-columns: 1fr;
+  }
+
+  .services__left {
+    margin-left: 0;
+    padding: 50px 40px;
+  }
+
+  .services__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .services__right {
+    margin-left: 0;
+    padding: 50px 40px;
+  }
+}
+
+@media all and (max-width: 1260px) {
+  .input:not(:last-of-type) {
+    margin-right: 3%;
+  }
+
   .header {
     padding: 20px 50px;
   }
@@ -3780,15 +3863,21 @@ body {
     background: #fff;
     z-index: 11;
   }
-}
 
-@media all and (max-width: 1260px) {
-  .input:first-child {
-    margin-right: 3%;
+  .achievements__content {
+    padding-right: 50px;
   }
 
-  .input__btn {
-    margin-left: 7%;
+  .achievements__title {
+    font-size: 35px;
+  }
+
+  .achievements__texts_right {
+    margin-top: 40px;
+  }
+
+  .achievements__texts {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .form__item h2 {
@@ -3798,10 +3887,25 @@ body {
 
   .form__item {
     justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .form__block {
     width: 66%;
+  }
+
+  .media {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .media__title {
+    font-size: 40px;
+  }
+
+  .media__items {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -3847,7 +3951,7 @@ body {
 @media all and (max-width: 890px) {
   .input {
     margin-bottom: 3%;
-    max-width: 300px;
+    margin-right: 0;
   }
 
   .input__btn {
@@ -3856,11 +3960,13 @@ body {
 
   .form__item h2 {
     width: 100%;
-    margin-bottom: 3%;
+    margin-bottom: 20px;
   }
 
   .form__item {
     flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .form__block {
@@ -3869,6 +3975,78 @@ body {
 
   .form__inputs_top {
     flex-direction: column;
+  }
+}
+
+@media all and (max-width: 860px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text--simple {
+    font-size: 15px;
+  }
+
+  .benefit__in {
+    font-size: 18px;
+  }
+
+  .button {
+    padding: 13px 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .list li {
+    font-size: 15px;
+  }
+
+  .opportunities__in {
+    padding: 50px 20px;
+  }
+
+  .hero_banner__title {
+    font-size: 40px;
+  }
+
+  .hero_banner__subtitle {
+    font-size: 20px;
+  }
+
+  .services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .services__left {
+    padding: 35px;
+  }
+
+  .services__title {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .services__right {
+    padding: 35px;
+  }
+
+  .achievements__content {
+    padding-right: 20px;
+  }
+
+  .media__title {
+    font-size: 35px;
+  }
+
+  .media__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .media__item--preview {
+    order: -1;
   }
 }
 
@@ -3914,10 +4092,6 @@ body {
   .opportunity__text p {
     font-size: 15px;
     line-height: 20px;
-  }
-
-  .opportunities__in {
-    padding: 75px 40px;
   }
 
   .opportunities__title {

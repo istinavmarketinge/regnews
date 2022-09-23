@@ -42,6 +42,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: #000;
+        @media all and (max-width: 1280px) {
+            font-size: 23px;
+        }
+        @media all and (max-width: 860px) {
+            font-size: 18px;
+        }
         &:hover{
             background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
             -webkit-background-clip: text;

@@ -13,7 +13,7 @@
         }
         @media all and (max-width: 890px) {
             width: 100%;
-            margin-bottom: 3%;
+            margin-bottom: 20px;
         }
     }
     &__item {
@@ -24,9 +24,13 @@
         padding: 72px 0 34px;
         @media all and (max-width: 1260px) {
             justify-content: space-around;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
         @media all and (max-width: 890px) {
             flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
     }
     &__block{

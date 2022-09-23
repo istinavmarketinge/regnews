@@ -3,6 +3,14 @@
     background: var(--background);
     font-family: 'Roboto', sans-serif;
     position: relative;
+    @media all and (max-width: 1280px) {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+    @media all and (max-width: 860px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &:after {
         content: '';
         position: absolute;
@@ -20,6 +28,9 @@
         grid-template-columns: 833fr 544fr;
         grid-gap: 27px;
         align-items: center;
+        @media all and (max-width: 1280px) {
+            grid-template-columns: 1fr;
+        }
     }
     &__left,
     &__right {
@@ -30,6 +41,13 @@
         padding: 101px 61px 99px 129px;
         margin-left: -129px;
         background: #fff;
+        @media all and (max-width: 1280px) {
+            margin-left: 0;
+            padding: 50px 40px;
+        }
+        @media all and (max-width: 860px) {
+            padding: 35px;
+        }
     }
     &__block {
         &:not(:last-child) {
@@ -43,6 +61,14 @@
         line-height: 100%;
         color: $dark;
         margin-bottom: 37px;
+        @media all and (max-width: 1280px) {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        @media all and (max-width: 860px) {
+            font-size: 26px;
+            font-weight: bold;
+        }
         &--primary {
             color: $mainColor;
         }
@@ -50,6 +76,13 @@
     &__right {
         background: #fff;
         padding: 105px 91px;
+        @media all and (max-width: 1280px) {
+            margin-left: 0;
+            padding: 50px 40px;
+        }
+        @media all and (max-width: 860px) {
+            padding: 35px;
+        }
     }
     &__right_text {
         color: $dark;

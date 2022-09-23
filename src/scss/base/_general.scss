@@ -12,6 +12,10 @@ body {
     padding-right: 50px;
     padding-left: 50px;
     box-sizing: border-box;
+    @media all and (max-width: 860px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .text--simple {
@@ -19,6 +23,9 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
+    @media all and (max-width: 860px) {
+        font-size: 15px;
+    }
 }
 
 
