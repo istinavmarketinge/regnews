@@ -1,5 +1,8 @@
 .opportunity {
     width: 60%;
+    @media all and (max-width: 1100px) {
+        width: 100%;
+    }
     &__in {
         display: flex;
         justify-content: space-between;
@@ -12,6 +15,9 @@
     }
     &__text {
         width: 80%;
+        @media all and (max-width: 560px) {
+            width: 70%;
+        }
     }
     &:nth-child(2n+2) &__in {
         flex-direction: row-reverse;
@@ -27,19 +33,32 @@
         position: relative;
         bottom: 30px;
         background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
-            -webkit-background-clip: text;
-            color: #fff;
+        -webkit-background-clip: text;
+        color: #fff;
+        @media all and (max-width: 560px) {
+            font-size: 140px;
+            bottom: 15px;
+            width: 30%;
+        }
     }
-    &__text h2{
+    &__text h2 {
         font-size: 30px;
         line-height: 39px;
         font-family: 'Roboto';
+        @media all and (max-width: 560px) {
+            font-size: 26px;
+            line-height: 32px;
+        }
     }
-    &__text p{
+    &__text p {
         font-size: 18px;
         line-height: 23px;
         color: #909090;
         font-family: 'Roboto';
+        @media all and (max-width: 560px) {
+            font-size: 15px;
+            line-height: 20px;
+        }
     }
 }
 
