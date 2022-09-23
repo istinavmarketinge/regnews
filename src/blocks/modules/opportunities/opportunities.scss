@@ -9,6 +9,9 @@
     &__in {
         padding: 104px 123px;
         background-color: #fff;
+        @media all and (max-width: 560px) {
+            padding: 75px 40px;
+        }
     }
     &__item {
         display: flex;
@@ -23,6 +26,9 @@
         font-weight: 400;
         margin: 0;
         padding-bottom: 36px;
+        @media all and (max-width: 560px){
+            font-size: 36px;
+        }
     }
 
 }

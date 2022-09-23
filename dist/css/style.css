@@ -3094,7 +3094,7 @@ body {
 }
 
 .input {
-  max-width: 275px;
+  max-width: 250px;
   width: 100%;
   background: #02AD8F;
   border-radius: 5px;
@@ -3103,6 +3103,10 @@ body {
   outline: none;
   font-size: 18px;
   font-family: "Roboto";
+}
+
+.input:first-child {
+  margin-right: 25px;
 }
 
 .input::-moz-placeholder {
@@ -3118,11 +3122,11 @@ body {
   border: none;
   max-width: 245px;
   width: 100%;
-  border-radius: 5px;
   padding: 17px;
   color: #04C3A1;
   cursor: pointer;
   font-family: "Noto Sans";
+  margin-left: 59px;
 }
 
 .list {
@@ -3511,9 +3515,12 @@ body {
 .form__inputs_top {
   display: flex;
   justify-content: space-between;
+  max-width: 879px;
 }
 
 .form__application {
+  font-family: "Roboto";
+  font-size: 14px;
   display: flex;
   color: #fff;
   margin-top: 23px;
@@ -3617,14 +3624,118 @@ body {
   margin-top: 52px;
 }
 
+@media all and (max-width: 1260px) {
+  .input:first-child {
+    margin-right: 3%;
+  }
+
+  .input__btn {
+    margin-left: 7%;
+  }
+
+  .form__item h2 {
+    font-size: 30px;
+    width: 30%;
+  }
+
+  .form__item {
+    justify-content: space-around;
+  }
+
+  .form__block {
+    width: 66%;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .opportunity {
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 1024px) {
   .benefits__in {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media all and (max-width: 890px) {
+  .input {
+    margin-bottom: 3%;
+    max-width: 300px;
+  }
+
+  .input__btn {
+    margin: 0;
+  }
+
+  .form__item h2 {
+    width: 100%;
+    margin-bottom: 3%;
+  }
+
+  .form__item {
+    flex-direction: column;
+  }
+
+  .form__block {
+    width: 100%;
+  }
+
+  .form__inputs_top {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .footer {
+    font-size: 16px;
+  }
+
+  .footer__block {
+    flex-direction: column;
+    padding: 50px 0 50px;
+  }
+
+  .footer__left,
+  .footer__right {
+    width: 100%;
+    text-align: left;
+  }
+}
+
 @media all and (max-width: 640px) {
   .benefits__in {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media all and (max-width: 560px) {
+  .opportunity__text {
+    width: 70%;
+  }
+
+  .opportunity__number {
+    font-size: 140px;
+    bottom: 15px;
+    width: 30%;
+  }
+
+  .opportunity__text h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .opportunity__text p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .opportunities__in {
+    padding: 75px 40px;
+  }
+
+  .opportunities__title {
+    font-size: 36px;
   }
 }

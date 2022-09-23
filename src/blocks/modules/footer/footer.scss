@@ -2,14 +2,25 @@
     font-family: 'Roboto';
     font-size: 20px;
     font-weight: 400;
+    @media all and (max-width: 720px) {
+        font-size: 16px;
+    }
     &__block{
         display: flex;
         justify-content: space-between;
         padding: 75px 0 84px;
         border-top: 1px solid #E8E8E8 ;
+        @media all and (max-width: 720px) {
+            flex-direction: column;
+            padding: 50px 0 50px;
+        }
     }
     &__left, &__right{
         width: 40%;
+        @media all and (max-width: 720px) {
+            width: 100%;
+            text-align: left;
+        }
     }
     &__right{
         text-align: right;

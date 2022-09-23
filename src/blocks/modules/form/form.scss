@@ -7,6 +7,14 @@
         font-weight: 500;
         width: 30%;
         margin: 0;
+        @media all and (max-width: 1260px) {
+            font-size: 30px;
+            width: 30%;
+        }
+        @media all and (max-width: 890px) {
+            width: 100%;
+            margin-bottom: 3%;
+        }
     }
     &__item {
         display: flex;
@@ -14,17 +22,34 @@
         width: 100%;
         align-items: baseline;
         padding: 72px 0 34px;
-
+        @media all and (max-width: 1260px) {
+            justify-content: space-around;
+        }
+        @media all and (max-width: 890px) {
+            flex-direction: column;
+        }
     }
     &__block{
         display: inline-block;
         width: 70%;
+        @media all and (max-width: 1260px){
+            width: 66%;
+        }
+        @media all and (max-width: 890px) {
+            width: 100%;
+        }
     }
     &__inputs_top{
         display: flex;
         justify-content: space-between;
+        max-width: 879px;
+        @media all and (max-width: 890px) {
+            flex-direction: column;
+        }
     }
     &__application {
+        font-family: 'Roboto';
+        font-size: 14px;
         display: flex;
         color: #fff;
         margin-top: 23px;
