@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220923173108">
+    <link rel="stylesheet" href="css/style.css?_v=20220923180308">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -54,7 +54,7 @@
             <p class="hero_banner__subtitle">
                 Ваш <span class="hero_banner__subtitle--big hero_banner__subtitle--primary">PR</span> и <span class="hero_banner__subtitle--big hero_banner__subtitle--secondary">GR</span> консультант
             </p>
-            <button class="button button--primary hero_banner__button">
+            <button class="button button--primary hero_banner__button" data-modal-id='1'>
     Работать с нами
 </button>
         </div>
@@ -150,7 +150,7 @@
                 </p>
             </div>
 
-            <button class="button button--primary services__button">
+            <button class="button button--primary services__button" data-modal-id='1'>
     Работать с нами
 </button>
         </div>
@@ -292,7 +292,7 @@
                     </div>
                 </div>
             </div>
-            <button class="button button--primary achievements__button">
+            <button class="button button--primary achievements__button" data-modal-id='1'>
     Подключить нашу CMS
 </button>
         </div>
@@ -361,7 +361,7 @@
                 Место для вашей фирмы
             </div>
         </div>
-        <button class="button button--primary media__button">
+        <button class="button button--primary media__button" data-modal-id='1'>
     Оставить заявку
 </button>
     </div>
@@ -382,19 +382,33 @@
 </footer>
         <div class="modal" data-modal="1">
     <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 1
-    </div>
-</div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
+        <div class="modal__wrap">
+            <div class="modal__closer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21" fill="none">
+                    <path d="M19.4769 1L1 19.4769M1.52216 1L19.999 19.4769" stroke="black" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="modal__content">
+                <div class="modal__title">Оставить заявку</div>
+                <form action="">
+                    <input type="text" class="modal__input" placeholder="Имя">
+                    <input type="text" class="modal__input" placeholder="Телефон">
+                    <label class="form__application">
+                        <input type="checkbox" name="checkbox" class="form__checkbox">
+                        <div class="form__phantom_checkbox"></div>
+                        <span>Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#">Политикой
+                                конфиденциальности</a></span>
+                    </label>
+                    <button class="button button--primary modal__button" >
+    Отправить
+</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
         
     </div>
-    <script src="js/app.min.js?_v=20220923173108"></script>
+    <script src="js/app.min.js?_v=20220923180308"></script>
 </body>
 </html>

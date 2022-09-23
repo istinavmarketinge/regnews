@@ -3086,6 +3086,11 @@ body {
   text-align: center;
   color: #FFFFFF;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #0B5AA3;
 }
 
 .opportunity {
@@ -3266,6 +3271,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
 }
 
 .modal.isOpened {
@@ -3280,13 +3286,99 @@ body {
   height: 100%;
 }
 
+.modal__closer {
+  width: 21px;
+  height: 21px;
+  font-size: 0;
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal__closer:hover {
+  transform: rotate(90deg);
+}
+
 .modal__in {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  max-width: 320px;
-  padding: 1.0416666667vw;
+  max-width: 753px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(190deg, #04C3A1 0%, #0B5AA3 100%);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modal__wrap {
   background: #fff;
+  border-radius: 10px;
+  padding: 60px 60px 66px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.modal__content {
+  max-width: 344px;
+  margin: 0 auto;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 140%;
+  color: #0B0B0B;
+  margin-bottom: 23px;
+  padding-right: 50px;
+}
+
+.modal__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #04C4A1;
+  border-radius: 0;
+  padding: 0;
+  height: 47px;
+  outline: none;
+}
+
+.modal__input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #38796D;
+}
+
+.modal__input::placeholder,
+.modal__input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #38796D;
+}
+
+.modal__button {
+  margin-top: 34px;
+}
+
+.modal .form__phantom_checkbox {
+  background: #04C4A1;
+  min-width: 15px;
+  max-width: 15px;
+}
+
+.modal .form__phantom_checkbox:after {
+  filter: brightness(10);
+}
+
+.modal .form__application {
+  color: #0B0B0B;
 }
 
 .benefits {
@@ -3734,6 +3826,11 @@ body {
   padding: 10px;
   font-size: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.media__item:hover {
+  transform: scale(1.1);
 }
 
 .media__item--preview {
@@ -4127,6 +4224,22 @@ body {
     font-size: 15px;
   }
 
+  .modal__closer {
+    top: 36px;
+  }
+
+  .modal__in {
+    max-width: 80vw;
+  }
+
+  .modal__wrap {
+    padding: 20px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
   .opportunities__in {
     padding: 50px 20px;
   }
@@ -4198,6 +4311,10 @@ body {
 
   .benefit__modal {
     width: 100%;
+  }
+
+  .modal__in {
+    max-width: calc(100vw - 40px);
   }
 
   .benefits__in {

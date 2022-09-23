@@ -18,10 +18,15 @@ const Modals = class Modals {
                 event.preventDefault();
                 this.openModal(event.target.dataset.modalId);
             }
-            if (!event.target.dataset.modalId && event.target.dataset.modal) {
+            if (!event.target.dataset.modalId && event.target.dataset.modal || event.target.classList.contains('modal__closer')) {
                 event.preventDefault();
                 this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
             }
+        })
+        document.querySelectorAll('.modal__closer').forEach(closer => {
+            closer.addEventListener('click', (event) => {
+                this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
+            });
         })
     }
     addKeyupListener() {

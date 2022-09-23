@@ -44,6 +44,10 @@
         padding: 10px;
         font-size: 0;
         box-sizing: border-box;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
         &--preview {
             background: #F5F5F5;
             
