@@ -2988,25 +2988,9 @@ html {
   color: #000;
 }
 
-@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
-  .benefit__in {
-    background: #000;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
 .benefit__in:hover {
   color: #04C4A1;
   box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
-}
-
-@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
-  .benefit__in:hover {
-    background: linear-gradient(64deg, #04C4A1 17.9%, #0B5AA3 87.03%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }
 
 .benefit__modal {
@@ -3032,6 +3016,22 @@ html {
 .benefit:hover .benefit__modal {
   opacity: 1;
   visibility: visible;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+  .wrapper:not(.isSafary) .benefit__in {
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+  .wrapper:not(.isSafary) .benefit__in:hover {
+    background: linear-gradient(64deg, #04C4A1 17.9%, #0B5AA3 87.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .logo {
