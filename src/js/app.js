@@ -7,6 +7,15 @@ import Header from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
 import MobileMenu from '../blocks/modules/mobile_menu/mobile_menu.js';
 
+
+function IsSafari() {
+
+    var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+    return is_safari;
+  
+}
+
+
 const header = new Header({
     enableFlexMenu: true
 });
@@ -28,3 +37,6 @@ $(document).ready(function () {
     mobileMenu.init();
 })
 
+
+
+console.log(IsSafari());
