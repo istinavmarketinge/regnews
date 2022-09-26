@@ -3019,13 +3019,15 @@ html {
 }
 
 @supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
-  .wrapper:not(.isSafary) .benefit__in {
+  .wrapper.isSafary .benefit__in {
     background: #000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
 
-  .wrapper:not(.isSafary) .benefit:hover {
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+  .wrapper.isSafary .benefit__in:hover {
     background: linear-gradient(64deg, #04C4A1 17.9%, #0B5AA3 87.03%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

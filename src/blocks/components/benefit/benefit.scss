@@ -91,18 +91,21 @@
         }
     }
 }
-@supports (background-clip: text) or (-webkit-background-clip: text) {
-    .wrapper:not(.isSafary) .benefit {
-        &__in {
+.wrapper.isSafary .benefit {
+    &__in {
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
             background: #000;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        &:hover {
-            background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
 
+        }
+        &:hover{
+            @supports (background-clip: text) or (-webkit-background-clip: text) {
+                background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+            }
         }
     }
 }
