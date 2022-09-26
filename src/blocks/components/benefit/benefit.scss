@@ -30,7 +30,7 @@
         height: 100%;
     }
     &__in {
-        background: #000;
+        background: #fff;
         padding: 20px 20px 20px 50px;
         height: 100%;
         display: flex;
@@ -39,9 +39,13 @@
         font-size: 30px;
         line-height: 39px;
         font-weight: 500;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: #000;
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
+            background: #000;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
         @media all and (max-width: 1280px) {
             font-size: 23px;
         }
@@ -49,11 +53,14 @@
             font-size: 18px;
         }
         &:hover{
-            background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             color: $mainColor;
             box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
+            @supports (background-clip: text) or (-webkit-background-clip: text) {
+                background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+            }
         }
     }
     &__modal {
