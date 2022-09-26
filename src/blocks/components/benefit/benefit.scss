@@ -91,7 +91,7 @@
         }
     }
 }
-.wrapper:not(.isSafary) .benefit {
+.wrapper:not(.isSafari) .benefit {
     &__in {
         @supports (background-clip: text) or (-webkit-background-clip: text) {
             background: #000;
