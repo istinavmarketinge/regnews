@@ -5,6 +5,10 @@ body {
     background: #FAFAFA;
     // overflow: hidden;
 }
+body,
+html {
+    scroll-behavior: smooth;
+}
 .wrapper {
     overflow: hidden;
 }
@@ -35,7 +39,7 @@ body {
 
 *::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
+    height: 10px; 
 }
 
 *::-webkit-scrollbar-track {

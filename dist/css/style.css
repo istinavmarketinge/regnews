@@ -2898,6 +2898,11 @@ body {
   background: #FAFAFA;
 }
 
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -4047,6 +4052,7 @@ body {
   .services {
     padding-top: 58px;
     padding-bottom: 58px;
+    background-position: 100% 50% !important;
   }
 
   .services__in {
