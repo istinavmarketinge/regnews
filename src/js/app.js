@@ -8,12 +8,10 @@ import Modals from '../blocks/modules/modals/modals.js';
 import MobileMenu from '../blocks/modules/mobile_menu/mobile_menu.js';
 
 
-function IsSafari() {
-
-    var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
-    return is_safari;
-  
-}
+var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               navigator.userAgent &&
+               navigator.userAgent.indexOf('CriOS') == -1 &&
+               navigator.userAgent.indexOf('FxiOS') == -1;
 
 
 const header = new Header({
@@ -38,5 +36,6 @@ $(document).ready(function () {
 })
 
 
-
-console.log(IsSafari());
+if (isSafari) {
+    $('.wrapper').addClass('isSafari');
+}
