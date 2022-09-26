@@ -35,7 +35,7 @@ $(document).ready(function () {
     mobileMenu.init();
 })
 
-
+console.log(isSafari);
 if (isSafari) {
     $('.wrapper').addClass('isSafari');
 }
