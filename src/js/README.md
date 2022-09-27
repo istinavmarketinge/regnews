@@ -7,22 +7,7 @@
 ```
 ## :zap: Инициализация
 * В файле ``` src/js/app.js ``` нужно имортировать зависимость:
-  * ``` import Vue from 'vue/dist/vue.js'; ```
-* Там же нужно создать экземпляр ``` Vue ```:
-```
-window.app = new Vue({
-    el: '#app',
-    data: () => ({
-        isMounted: false
-    }),
-    mounted() {
-        this.isMounted = true;
-    }
-});
-```
-* Все страницы должны быть обернуты в элемент с ```id="app"```, к тегу ```body``` этот id добавлять нельзя
-
-Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером.
+  * ``` import $ from 'jquery'; ```
 
 ## :open_file_folder: Модули
 * Для каждого блока должен существовать отдельный js файл в ``` src/blocks/modules/***/***.js ```, например ``` src/blocks/modules/header/header.js ``` 
@@ -45,24 +30,31 @@ export default Header;
 * Обязательно должен быть метод ``` init ``` у каждого модуля, который запускает весь код модуля.
 * В файле ``` src/js/app.js ``` импортируем модуль, создаем экземпляр класса и вызываем метод ``` init ```;
 ```
-import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 
 import Header from '../blocks/modules/header/header.js';
+import Modals from '../blocks/modules/modals/modals.js';
+import MobileMenu from '../blocks/modules/mobile_menu/mobile_menu.js';
 
+const header = new Header({
+    enableFlexMenu: true
+});
+const modals = new Modals({
+    modalsSelector: "data-modal",
+    modalsOpenerSelector: "data-modal-id",
+    openedClass: "isOpened"
+});
 
-window.app = new Vue({
-    el: '#app',
-    data: () => ({
-        isMounted: false,
-        header: new Header({
-            someVareible: 'someVareible'
-        })
-    }),
-    mounted() {
-        this.isMounted = true;
-        this.header.init();
-    }
+const mobileMenu = new MobileMenu({
+    headerMenuSelector: '.header_menu',
+    mobileMenuSelector: '.mobileMenu__menu',
+    mobileMenuOpener: '.mobileMenu__opener'
+});
+
+$(document).ready(function () {
+    header.init();
+    modals.init();
+    mobileMenu.init();
 });
 ```
 

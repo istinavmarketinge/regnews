@@ -12,4 +12,18 @@
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        background: $secondaryColor;
+    }
+
+    @media all and (max-width: 1280px) {
+        font-size: 25px;
+    }
+    @media all and (max-width: 860px) {
+        padding: 13px 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
 }

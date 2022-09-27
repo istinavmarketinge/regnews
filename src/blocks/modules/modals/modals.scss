@@ -10,6 +10,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease;
+    font-family: 'Roboto', sans-serif;
     &.isOpened {
         opacity: 1;
         visibility: visible;
@@ -20,12 +21,94 @@
         vertical-align: middle;
         height: 100%;
     }
+    &__closer {
+        width: 21px;
+        height: 21px;
+        font-size: 0;
+        position: absolute;
+        top: 32px;
+        right: 40px;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        @media all and (max-width: 860px) {
+            top: 36px;
+        }
+    }
     &__in {
         display: inline-block;
         vertical-align: middle;
         width: 100%;
-        max-width: 320px;
-        padding: vw(20);
+        max-width: 753px;
+        padding: 12px;
+        border-radius: 10px;
+        background: linear-gradient(190deg, #04C3A1 0%, #0B5AA3 100%);
+        position: relative;
+        box-sizing: border-box;
+        @media all and (max-width: 860px) {
+            max-width: 80vw;
+        }
+        @media all and (max-width: 640px) {
+            max-width: calc(100vw - 40px);
+        }
+    }
+    &__wrap {
         background: #fff;
+        border-radius: 10px;
+        padding: 60px 60px 66px;
+        text-align: left;
+        box-sizing: border-box;
+        @media all and (max-width: 860px) {
+            padding: 20px;
+        }
+    }
+    &__content {
+        max-width: 344px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 140%;
+        color: $dark;
+        margin-bottom: 23px;
+        padding-right: 50px;
+        @media all and (max-width: 860px) {
+            font-size: 20px;
+        }
+    }
+    &__input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $mainColor;
+        border-radius: 0;
+        padding: 0;
+        height: 47px;
+        outline: none;
+        &::placeholder,
+        & {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #38796D;
+        }
+    }
+    &__button {
+        margin-top: 34px;
+    }
+    .form__phantom_checkbox {
+        background: $mainColor;
+        min-width: 15px;
+        max-width: 15px;
+        &:after {
+            filter: brightness(10);
+        }
+    }
+    .form__application {
+        color: $dark;
     }
 }

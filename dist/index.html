@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220927100408">
+    <link rel="stylesheet" href="css/style.css?_v=20220927100916">
 </head>
 <body>
-    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+    <div class="wrapper">
         <header class="header">
     <div class="header__in">
         <a href="#" class="logo">
      <!-- <div class="logo__name">Mazov & Co</div>
      <div class="logo__description">Рекламное агенство полного цикла</div> -->
      <div class="logo__image">
-        <img src="img/svg/logo.svg" alt="">
+        <img src="https://via.placeholder.com/1920x768.png" alt="">
      </div>
 </a>
         <nav class="header_menu">
     <ul>
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Услуги</a></li>
+        <li><a href="#services">Услуги</a></li>
         <li><a href="#">Наши клиенты</a></li>
         <li><a href="#">Новости</a></li>
         <li><a href="#">О компании</a></li>
@@ -30,17 +30,32 @@
         <li><a href="#">Контакты</a></li>
     </ul>
 </nav>
+        <div class="mobileMenu__opener">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="mobileMenu__wrapper">
+    <div class="mobileMenu__wrapper__in">
+        <div class="mobileMenu__left">
+            <nav class="mobileMenu__menu">
+                <!-- Должно быть пустым, сюда прилетят пункты из header_menu -->
+            </nav>
+        </div>
+        <div class="mobileMenu__right"></div>
+    </div>
+</div>
     </div>
 </header>
-        <div class="hero_banner" style="--backround: url('/img/hero_bg.jpg') 50% 50% / cover no-repeat">
+        <div class="hero_banner" style="--backround: url('../img/hero_bg2.jpg') 50% 50% / cover no-repeat">
     <div class="hero_banner__in container">
         <div class="hero_banner__left">
             <h1 class="hero_banner__title">Новостные системы</h1>
             <p class="hero_banner__subtitle">
                 Ваш <span class="hero_banner__subtitle--big hero_banner__subtitle--primary">PR</span> и <span class="hero_banner__subtitle--big hero_banner__subtitle--secondary">GR</span> консультант
             </p>
-            <button class="button button--primary hero_banner__button">
-    Mazov & Co
+            <button class="button button--primary hero_banner__button" data-modal-id='1'>
+    Работать с нами
 </button>
         </div>
     </div>
@@ -50,33 +65,45 @@
         <div class="benefits__in">
             <div class="benefit">
     <div class="benefit__bg">
-    <div class="benefit__in">
-        Более  10 лет на рынке
+        <div class="benefit__in">
+            Более  10 лет на рынке
+        </div>
     </div>
-</div>
+    <div class="benefit__modal">
+        50+ сотрудников в офисах в Воронеже и Екатеринбурге, Туле (головной офис), Владимире и  Орле, в Липецке и на Кузбасе, и в др городах, работающих как в наших офисах так и удаленно
+    </div>
 </div><div class="benefit">
     <div class="benefit__bg">
-    <div class="benefit__in">
-        Более 50 сотрудников
+        <div class="benefit__in">
+            Более 50 сотрудников
+        </div>
     </div>
-</div>
+    <div class="benefit__modal">
+        50+ сотрудников в офисах в Воронеже и Екатеринбурге, Туле (головной офис), Владимире и  Орле, в Липецке и на Кузбасе, и в др городах, работающих как в наших офисах так и удаленно
+    </div>
 </div><div class="benefit">
     <div class="benefit__bg">
-    <div class="benefit__in">
-        Более 10 интернет-СМИ
+        <div class="benefit__in">
+            Более 10 интернет-СМИ
+        </div>
     </div>
-</div>
+    <div class="benefit__modal">
+        50+ сотрудников в офисах в Воронеже и Екатеринбурге, Туле (головной офис), Владимире и  Орле, в Липецке и на Кузбасе, и в др городах, работающих как в наших офисах так и удаленно
+    </div>
 </div><div class="benefit">
     <div class="benefit__bg">
-    <div class="benefit__in">
-        Партнерская программа
+        <div class="benefit__in">
+            Партнерская программа
+        </div>
     </div>
-</div>
+    <div class="benefit__modal">
+        50+ сотрудников в офисах в Воронеже и Екатеринбурге, Туле (головной офис), Владимире и  Орле, в Липецке и на Кузбасе, и в др городах, работающих как в наших офисах так и удаленно
+    </div>
 </div>
         </div>
     </div>
 </div>
-        <section class="services" style="--background: url('https://via.placeholder.com/1920x768.png') 50% 50% / cover no-repeat">
+        <section class="services" id="services" style="--background: url('../img/services_bg.png') 50% 50% / cover no-repeat">
     <div class="services__in container">
         <div class="services__left">
             <div class="services__block">
@@ -111,7 +138,7 @@
             </div>
         </div>
         <div class="services__right">
-            <div class="services__right_text">
+            <div class="services__right_text text--simple">
                 <p>
                     Мы разрабатываем проекты на PHP, Java, Objective-C, JavaScript (client-side).
                 </p>
@@ -123,13 +150,25 @@
                 </p>
             </div>
 
-            <button class="button button--primary services__button">
+            <button class="button button--primary services__button" data-modal-id='1'>
     Работать с нами
 </button>
         </div>
     </div>
 </section>
         <div class="opportunities">
+    <div class="opportunities__accessuar opportunities__accessuar--first">
+        <img src="img/svg/animation_circle.svg" alt="">
+    </div>
+    <div class="opportunities__accessuar opportunities__accessuar--second">
+        <img src="img/svg/animation_circle.svg" alt="">
+    </div>
+    <div class="opportunities__accessuar opportunities__accessuar--number opportunities__accessuar--number_first">
+        <img src="img/svg/numbers.svg" alt="">
+    </div>
+    <div class="opportunities__accessuar opportunities__accessuar--number opportunities__accessuar--number_second">
+        <img src="img/svg/numbers.svg" alt="">
+    </div>
     <div class="opportunities__wrap">
         <div class="opportunities__in">
             <h2 class="opportunities__title">Возможности</h2>
@@ -183,7 +222,8 @@
             <div class="form__block">
                 <form class="form__inputs">
                     <div class="form__inputs_top">
-                        <input class="input" type="text" placeholder="Имя"><input class="input" type="text" placeholder="Телефон"><input class="input__btn" type="submit" placeholder="Отправить">
+                        <input class="input" type="text" placeholder="Имя"><input class="input" type="text" placeholder="Телефон">
+                        <button type="submit" class="input__btn">Отправить</button>
                     </div>
                     <label class="form__application">
                         <input type="checkbox" name="checkbox" class="form__checkbox">
@@ -198,9 +238,9 @@
         </div>
     </div>
 </div>
-        <div class="achievements" style="--background: url('https://via.placeholder.com/1920x768.png') 50% 50% / cover no-repeat">
+        <div class="achievements" style="--background: url('../img/achievements_bg.png') 50% 50% / cover no-repeat">
     <div class="achievements__in container">
-        <div class="achievements__content" style="--background-image: url('../img/bald-code.gif')">
+        <div class="achievements__content" style="--background-image: url('https://istinavmarketinge.github.io/regnews/dist/img/bald_code.gif')">
             <div class="achievements__title">Достижения</div>
             <div class="achievements__texts">
                 <div class="achievements__texts_left">
@@ -252,7 +292,7 @@
                     </div>
                 </div>
             </div>
-            <button class="button button--primary achievements__button">
+            <button class="button button--primary achievements__button" data-modal-id='1'>
     Подключить нашу CMS
 </button>
         </div>
@@ -321,7 +361,7 @@
                 Место для вашей фирмы
             </div>
         </div>
-        <button class="button button--primary media__button">
+        <button class="button button--primary media__button" data-modal-id='1'>
     Оставить заявку
 </button>
     </div>
@@ -342,19 +382,33 @@
 </footer>
         <div class="modal" data-modal="1">
     <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 1
-    </div>
-</div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
+        <div class="modal__wrap">
+            <div class="modal__closer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21" fill="none">
+                    <path d="M19.4769 1L1 19.4769M1.52216 1L19.999 19.4769" stroke="black" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="modal__content">
+                <div class="modal__title">Оставить заявку</div>
+                <form action="">
+                    <input type="text" class="modal__input" placeholder="Имя">
+                    <input type="text" class="modal__input" placeholder="Телефон">
+                    <label class="form__application">
+                        <input type="checkbox" name="checkbox" class="form__checkbox">
+                        <div class="form__phantom_checkbox"></div>
+                        <span>Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#">Политикой
+                                конфиденциальности</a></span>
+                    </label>
+                    <button class="button button--primary modal__button" >
+    Отправить
+</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
         
     </div>
-    <script src="js/app.min.js?_v=20220927100408"></script>
+    <script src="js/app.min.js?_v=20220927100916"></script>
 </body>
 </html>

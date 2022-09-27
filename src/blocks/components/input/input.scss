@@ -1,5 +1,5 @@
 .input{
-    max-width: 250px;
+    // max-width: 250px;
     width: 100%;
     background: #02AD8F;
     border-radius: 5px;
@@ -8,11 +8,13 @@
     outline:none;
     font-size: 18px;
     font-family: 'Roboto';
+    flex: 1 1 auto;
+    box-sizing: border-box;
     @media all and (max-width: 890px) {
         margin-bottom: 3%;
-        max-width: 300px;
+        margin-right: 0;
     }
-    &:first-child {
+    &:not(:last-of-type) {
         margin-right: 25px;
         @media all and (max-width: 1260px) {
             margin-right: 3%;
@@ -24,15 +26,15 @@
     &__btn{
         background: #fff;
         border: none;
-        max-width: 245px;
+        
         width: 100%;
-        padding: 17px ;
+        padding: 17px;
         color: #04C3A1;
         cursor: pointer;
         font-family: 'Noto Sans';
         margin-left: 59px;
-        @media all and (max-width: 1260px) {
-            margin-left: 7%;
+        @media all and (min-width: 891px) {
+            max-width: 245px;
         }
         @media all and (max-width: 890px) {
             margin: 0;

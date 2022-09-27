@@ -3,6 +3,14 @@
 
 body {
     background: #FAFAFA;
+    // overflow: hidden;
+}
+body,
+html {
+    scroll-behavior: smooth;
+}
+.wrapper {
+    overflow: hidden;
 }
 
 .container {
@@ -12,6 +20,10 @@ body {
     padding-right: 50px;
     padding-left: 50px;
     box-sizing: border-box;
+    @media all and (max-width: 860px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .text--simple {
@@ -19,4 +31,22 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
+    @media all and (max-width: 860px) {
+        font-size: 15px;
+    }
+}
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+
+*::-webkit-scrollbar-track {
+    background: #FAFAFA;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: $mainColor url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAYAAAARml2dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbSURBVHgBxc0BDQAAAIIw6B9aUzhf4AJhy+dRa/wDAWMR3NsAAAAASUVORK5CYII=) 50% 50% no-repeat;
+    cursor: pointer;
 }

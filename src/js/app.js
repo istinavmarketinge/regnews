@@ -1,14 +1,21 @@
 import * as globalFunctions from './modules/functions.js';
 globalFunctions.isWebp();
 
-// import Vue from 'vue/dist/vue.js';
-// import $ from 'jquery';
+import $ from 'jquery';
 
 import Header from '../blocks/modules/header/header.js';
 import Modals from '../blocks/modules/modals/modals.js';
+import MobileMenu from '../blocks/modules/mobile_menu/mobile_menu.js';
+
+
+var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               navigator.userAgent &&
+               navigator.userAgent.indexOf('CriOS') == -1 &&
+               navigator.userAgent.indexOf('FxiOS') == -1;
+
 
 const header = new Header({
-    someVareible: 'someVareible'
+    enableFlexMenu: true
 });
 const modals = new Modals({
     modalsSelector: "data-modal",
@@ -16,7 +23,19 @@ const modals = new Modals({
     openedClass: "isOpened"
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+const mobileMenu = new MobileMenu({
+    headerMenuSelector: '.header_menu',
+    mobileMenuSelector: '.mobileMenu__menu',
+    mobileMenuOpener: '.mobileMenu__opener'
+});
+
+$(document).ready(function () {
     header.init();
     modals.init();
+    mobileMenu.init();
 })
+
+console.log(isSafari);
+if (isSafari) {
+    $('.wrapper').addClass('isSafari');
+}

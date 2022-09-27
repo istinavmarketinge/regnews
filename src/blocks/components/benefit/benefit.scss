@@ -1,4 +1,5 @@
 .benefit {
+    font-family: 'Noto Sans', sans-serif;
     padding-left: 7px;
     position: relative;
     cursor: pointer;
@@ -29,7 +30,7 @@
         height: 100%;
     }
     &__in {
-        background: #000;
+        background: #fff;
         padding: 20px 20px 20px 50px;
         height: 100%;
         display: flex;
@@ -37,17 +38,74 @@
         box-sizing: border-box;
         font-size: 30px;
         line-height: 39px;
-        font-family: 'Noto Sans';
         font-weight: 500;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: #000;
+        @media all and (max-width: 1280px) {
+            font-size: 23px;
+        }
+        @media all and (max-width: 640px) {
+            font-size: 18px;
+        }
         &:hover{
-            background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
+            color: $mainColor;
+            box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);            
+        }
+    }
+    &__modal {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        padding: 37px 42px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: $dark;
+        background: #fff;
+        width: 200%;
+        box-sizing: border-box;
+        z-index: 8;
+        box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        @media all and (max-width: 640px) {
+            width: 100%;
+        }
+    }
+    &:hover &__modal {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media all and (min-width: 1261px) {
+        &:nth-child(4n+4) &__modal,
+        &:nth-child(4n+3) &__modal {
+            left: auto;
+            right: 0;
+        }
+    }
+    @media all and (max-width: 1260px) and (min-width: 641px) {
+        &:nth-child(2n+2) &__modal {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+.wrapper:not(.isSafari) .benefit {
+    &__in {
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
+            background: #000;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            color: $mainColor;
-            box-shadow: 0px 2px 39px rgba(0, 0, 0, 0.05);
+
+        }
+        &:hover{
+            @supports (background-clip: text) or (-webkit-background-clip: text) {
+                background: linear-gradient(64deg, #{$mainColor} 17.9%, #0B5AA3 87.03%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+            }
         }
     }
 }
